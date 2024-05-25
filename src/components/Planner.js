@@ -10,7 +10,7 @@ const Planner = ({ setTimetable }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.get('https://opendata.transport.nsw.gov.au/dataset/50ccd787-0d7e-4bcf-9c12-84ca3ab3e897/resource/ad58515a-3593-4d72-952e-a49c859e1db8/download/getschedule-v2_1.0.json', {
+      const response = await axios.get('https://opendata.transport.nsw.gov.au/dataset/72715aef-c79c-463c-9207-4a2d010aff40/resource/917c66c3-8123-4a0f-b1b1-b4220f32585d/download/tripplanner_swag_20231016_1.yaml', {
         params: { from, to, date }
       });
       setTimetable(response.data);
