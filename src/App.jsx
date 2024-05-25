@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Homepage from './components/Homepage';
 import Planner from './components/Planner';
 import ResultsPage from './components/ResultsPage';
@@ -19,13 +19,13 @@ const App = () => {
           <li><Link to="/contact">Contact</Link></li>
         </ul>
       </nav>
-      <Switch>
-        <Route path="/" exact component={Homepage} />
-        <Route path="/planner" render={() => <Planner setTimetable={setTimetable} />} />
-        <Route path="/results" render={() => <ResultsPage timetable={timetable} />} />
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/planner" element={<Planner setTimetable={setTimetable} />} />
+        <Route path="/results" element={<ResultsPage timetable={timetable} />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </Router>
   );
 };
