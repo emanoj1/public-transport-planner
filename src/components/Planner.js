@@ -10,7 +10,9 @@ const Planner = ({ setTimetable }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/timetable', { from, to, date });
+      const response = await axios.get('https://opendata.transport.nsw.gov.au/dataset/50ccd787-0d7e-4bcf-9c12-84ca3ab3e897/resource/ad58515a-3593-4d72-952e-a49c859e1db8/download/getschedule-v2_1.0.json', {
+        params: { from, to, date }
+      });
       setTimetable(response.data);
     } catch (error) {
       console.error('Error fetching timetable:', error);
