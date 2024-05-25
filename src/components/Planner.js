@@ -9,15 +9,46 @@ const Planner = () => {
   const handlePlanJourney = async () => {
     try {
       // Call Stop_Finder API to get stop IDs for from and to locations
-      const fromResponse = await axios.get(`STOP_FINDER_API_URL?location=${from}`);
-      const toResponse = await axios.get(`STOP_FINDER_API_URL?location=${to}`);
+      const fromResponse = await axios.get(`https://api.transport.nsw.gov.au/v1/tp/stop_finder`, {
+        params: {
+          outputFormat: 'rapidJSON',
+          type_sf: 'poi',
+          name_sf: from,
+          coordOutputFormat: 'EPSG:4326',
+          TfNSWSF: true,
+          version: '10.2.1.42'
+        }
+      });
+      const toResponse = await axios.get(`https://api.transport.nsw.gov.au/v1/tp/stop_finder`, {
+        params: {
+          outputFormat: 'rapidJSON',
+          type_sf: 'poi',
+          name_sf: to,
+          coordOutputFormat: 'EPSG:4326',
+          TfNSWSF: true,
+          version: '10.2.1.42'
+        }
+      });
       
-      const fromStopId = fromResponse.data.stopId;
-      const toStopId = toResponse.data.stopId;
+      const fromStopId = fromResponse.data.locations[0].id;
+      const toStopId = toResponse.data.locations[0].id;
 
       // Call Departure_Mon API to get departure time for the journey
-      const departureTimeResponse = await axios.get(`DEPARTURE_MON_API_URL?fromStopId=${fromStopId}&toStopId=${toStopId}&date=${date}`);
-      const departureTime = departureTimeResponse.data.departureTime;
+      const departureTimeResponse = await axios.get(`https://api.transport.nsw.gov.au/v1/tp/departure_mon`, {
+        params: {
+          outputFormat: 'rapidJSON',
+          coordOutputFormat: 'EPSG:4326',
+          mode: 'direct',
+          type_dm: 'stop',
+          name_dm: fromStopId,
+          itdDate: date,
+          itdTime: '1200', // Example time (may need to adjust this)
+          departureMonitorMacro: true,
+          TfNSWDM: true,
+          version: '10.2.1.42'
+        }
+      });
+      const departureTime = departureTimeResponse.data.departureList[0].time;
 
       // Process departureTime as needed
       console.log('Departure Time:', departureTime);
@@ -37,4 +68,3 @@ const Planner = () => {
 };
 
 export default Planner;
-
