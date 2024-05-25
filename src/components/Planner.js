@@ -11,7 +11,7 @@ const Planner = ({ setTimetable }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/timetable', formData);
+      const response = await axios.post('http://localhost:5000/api/timetable', formData);
       setTimetable(response.data);
     } catch (error) {
       console.error('Error fetching timetable', error);
