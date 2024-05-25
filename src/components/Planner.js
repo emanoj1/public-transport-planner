@@ -2,31 +2,45 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const Planner = ({ setTimetable }) => {
-  const [formData, setFormData] = useState({ start: '', end: '', city: '', date: '' });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  const [from, setFrom] = useState('');
+  const [to, setTo] = useState('');
+  const [date, setDate] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
-      const response = await axios.post('http://localhost:5000/api/timetable', formData);
+      const response = await axios.post('http://localhost:5000/api/timetable', { from, to, date });
       setTimetable(response.data);
     } catch (error) {
-      console.error('Error fetching timetable', error);
+      console.error('Error fetching timetable:', error);
     }
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" name="start" placeholder="Start Location" onChange={handleChange} required />
-      <input type="text" name="end" placeholder="End Location" onChange={handleChange} required />
-      <input type="text" name="city" placeholder="City" onChange={handleChange} required />
-      <input type="date" name="date" onChange={handleChange} required />
-      <button type="submit">Get Timetable</button>
+      <div>
+        <label>
+          FROM:
+          <input type="text" value={from} onChange={(e) => setFrom(e.target.value)} required />
+        </label>
+      </div>
+      <div>
+        <label>
+          TO:
+          <input type="text" value={to} onChange={(e) => setTo(e.target.value)} required />
+        </label>
+      </div>
+      <div>
+        <label>
+          Date:
+          <input type="date" value={date} onChange={(e) => setDate(e.target.value)} required />
+        </label>
+      </div>
+      <button type="submit">Plan Journey</button>
     </form>
   );
 };
 
 export default Planner;
+
