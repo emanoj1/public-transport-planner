@@ -56,8 +56,8 @@ const Homepage = ({ setTimetable }) => {
   return (
     <div>
       {/* Welcome Message */}
-      <h1>Welcome to Commute Planner</h1>
-      <p>Plan your journey on the city's public transport system with ease.</p>
+      <h1>Plan your journey on the city's public transport system with ease!</h1>
+      <p>Enter your start and end location, and choose your date of travel below:</p>
 
       {/* Planner Form */}
       <form onSubmit={handlePlanJourney}>
@@ -93,7 +93,7 @@ const Homepage = ({ setTimetable }) => {
 
       {/* Footer */}
       <footer>
-        <p>© 2023 Commute Planner. All rights reserved.</p>
+        <p>© 2023 Public Transport Planner. All rights reserved.</p>
       </footer>
     </div>
   );
