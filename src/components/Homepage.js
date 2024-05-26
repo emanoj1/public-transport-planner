@@ -74,7 +74,7 @@ const Homepage = ({ setTimetable }) => {
   return (
     <div>
       <header>
-        <img src="/path/to/logo.png" alt="Commute Planner Logo" style={{ height: '50px' }} />
+        <img src="/public-transport-planner-logo.png" alt="Transport Planner Logo" style={{ height: '50px' }} />
         <nav>
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
@@ -83,7 +83,7 @@ const Homepage = ({ setTimetable }) => {
       </header>
 
       <main>
-        <h1>Welcome to Commute Planner</h1>
+        <h1>Welcome to your trip planner</h1>
         <p>Plan your journey on the city's public transport system with ease.</p>
 
         <form onSubmit={handlePlanJourney}>
@@ -104,7 +104,7 @@ const Homepage = ({ setTimetable }) => {
       </main>
 
       <footer>
-        <p>&copy; 2024 Commute Planner. All rights reserved.</p>
+        <p>&copy; 2024 Public Transport Planner. All rights reserved.</p>
       </footer>
     </div>
   );
