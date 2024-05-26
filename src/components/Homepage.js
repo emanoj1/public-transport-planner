@@ -30,7 +30,7 @@ const Homepage = ({ setTimetable }) => {
             TfNSWSF: true,
             version: '10.2.1.42',
           },
-          headers: { 'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJxOFdnM1ladUltVnRfZDFDbS03S0ozMmJHVVNDeWl2d2ZSbEhHMndiNU9vIiwiaWF0IjoxNzE2NjgzMzk2fQ.rAZINqZwGFU5TrwfrPdeRo7URoWmmyrXHHi-wy59sZw' }, // Replace with actual API key
+          headers: { 'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJxOFdnM1ladUltVnRfZDFDbS03S0ozMmJHVVNDeWl2d2ZSbEhHMndiNU9vIiwiaWF0IjoxNzE2NjgzMzk2fQ.rAZINqZwGFU5TrwfrPdeRo7URoWmmyrXHHi-wy59sZw' }, // Replace with your actual API key
         });
         const bestMatch = response.data.locations.find(loc => loc.isBest);
         return bestMatch?.properties?.stopId || bestMatch?.id;
@@ -60,7 +60,7 @@ const Homepage = ({ setTimetable }) => {
           TfNSWDM: true,
           version: '10.2.1.42',
         },
-        headers: { 'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJxOFdnM1ladUltVnRfZDFDbS03S0ozMmJHVVNDeWl2d2ZSbEhHMndiNU9vIiwiaWF0IjoxNzE2NjgzMzk2fQ.rAZINqZwGFU5TrwfrPdeRo7URoWmmyrXHHi-wy59sZw' }, // Replace with actual API key
+        headers: { 'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJxOFdnM1ladUltVnRfZDFDbS03S0ozMmJHVVNDeWl2d2ZSbEhHMndiNU9vIiwiaWF0IjoxNzE2NjgzMzk2fQ.rAZINqZwGFU5TrwfrPdeRo7URoWmmyrXHHi-wy59sZw' }, // Replace with your actual API key
       });
 
       setTimetable(timetableResponse.data.stopEvents);
@@ -111,6 +111,3 @@ const Homepage = ({ setTimetable }) => {
 };
 
 export default Homepage;
-
-
-
