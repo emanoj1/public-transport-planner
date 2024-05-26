@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Homepage = ({ setTimetable }) => {
   const [formData, setFormData] = useState({
@@ -8,6 +8,8 @@ const Homepage = ({ setTimetable }) => {
     to: '',
     date: '',
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -17,35 +19,34 @@ const Homepage = ({ setTimetable }) => {
     e.preventDefault();
 
     try {
-      // Get the stop ID for the 'from' location
-      const fromResponse = await axios.get('https://api.transport.nsw.gov.au/v1/tp/stop_finder', {
-        params: {
-          outputFormat: 'rapidJSON',
-          type_sf: 'poi',
-          name_sf: formData.from,
-          coordOutputFormat: 'EPSG:4326',
-          TfNSWSF: true,
-          version: '10.2.1.42',
-        },
-        headers: { 'Authorization': 'YOUR_API_KEY' }, // Replace with your actual API key
-      });
-      const fromStopId = fromResponse.data.locations[0].id;
+      // Function to get stop ID for a given location
+      const getStopId = async (location) => {
+        const response = await axios.get('https://api.transport.nsw.gov.au/v1/tp/stop_finder', {
+          params: {
+            outputFormat: 'rapidJSON',
+            type_sf: 'any',
+            name_sf: location,
+            coordOutputFormat: 'EPSG:4326',
+            TfNSWSF: true,
+            version: '10.2.1.42',
+          },
+          headers: { 'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJxOFdnM1ladUltVnRfZDFDbS03S0ozMmJHVVNDeWl2d2ZSbEhHMndiNU9vIiwiaWF0IjoxNzE2NjgzMzk2fQ.rAZINqZwGFU5TrwfrPdeRo7URoWmmyrXHHi-wy59sZw' }, // Replace with actual API key
+        });
+        const bestMatch = response.data.locations.find(loc => loc.isBest);
+        return bestMatch?.properties?.stopId || bestMatch?.id;
+      };
 
-      // Get the stop ID for the 'to' location
-      const toResponse = await axios.get('https://api.transport.nsw.gov.au/v1/tp/stop_finder', {
-        params: {
-          outputFormat: 'rapidJSON',
-          type_sf: 'poi',
-          name_sf: formData.to,
-          coordOutputFormat: 'EPSG:4326',
-          TfNSWSF: true,
-          version: '10.2.1.42',
-        },
-        headers: { 'Authorization': 'YOUR_API_KEY' }, // Replace with your actual API key
-      });
-      const toStopId = toResponse.data.locations[0].id;
+      // Get stop IDs for 'from' and 'to' locations
+      const fromStopId = await getStopId(formData.from);
+      const toStopId = await getStopId(formData.to);
 
-      // Get the timetable data
+      // Handle the case where stop IDs are not found
+      if (!fromStopId || !toStopId) {
+        console.error('Stop IDs not found for the provided locations');
+        return;
+      }
+
+      // Get the timetable data using departure_mon API
       const timetableResponse = await axios.get('https://api.transport.nsw.gov.au/v1/tp/departure_mon', {
         params: {
           outputFormat: 'rapidJSON',
@@ -54,15 +55,19 @@ const Homepage = ({ setTimetable }) => {
           type_dm: 'stop',
           name_dm: fromStopId,
           itdDate: formData.date.replace(/-/g, ''), // Format the date as YYYYMMDD
+          itdTime: '1200', // Fixed time for the example, update as necessary
           departureMonitorMacro: true,
           TfNSWDM: true,
           version: '10.2.1.42',
         },
-        headers: { 'Authorization': 'YOUR_API_KEY' }, // Replace with your actual API key
+        headers: { 'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJxOFdnM1ladUltVnRfZDFDbS03S0ozMmJHVVNDeWl2d2ZSbEhHMndiNU9vIiwiaWF0IjoxNzE2NjgzMzk2fQ.rAZINqZwGFU5TrwfrPdeRo7URoWmmyrXHHi-wy59sZw' }, // Replace with actual API key
       });
+
       setTimetable(timetableResponse.data.stopEvents);
+      navigate('/results');
     } catch (error) {
       console.error('Error planning journey:', error);
+      // Optionally display an error message to the user
     }
   };
 
@@ -106,5 +111,6 @@ const Homepage = ({ setTimetable }) => {
 };
 
 export default Homepage;
+
 
 
