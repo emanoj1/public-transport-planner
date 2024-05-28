@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { TKUITripPlanner } from 'tripkit-react';
-import logo from '..public-transport-planner-logo.png/';
+import logo from './public-transport-planner.logo';
 
 const Homepage = () => {
   return (

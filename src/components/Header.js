@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from './public-transport-planner.logo';
 
 const Header = () => {
   return (
     <header>
       <div>
-        <img src="/public-transport-planner-logo.png" alt="Public Transport Planner Logo" />
+        <img src="./public-transport-planner-logo.png" alt="Public Transport Planner Logo" />
       </div>
       <nav>
         <ul>

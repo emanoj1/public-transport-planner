@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from './public-transport-planner.logo';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { TKRoot, TKUITripPlanner } from 'tripkit-react';
 import Homepage from './components/Homepage';
