@@ -15,8 +15,17 @@ const config = {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(
-  <TKRoot config={config}>
-    <App /> {/* Render your App component within TKRoot */}
-  </TKRoot>
-);
+// root.render(
+//   <TKRoot config={config}>
+//     <App /> {/* Render your App component within TKRoot */}
+//   </TKRoot>
+// );
+
+// root.render(
+//   <TKRoot config={config}>
+//     <TKUITripPlanner />
+//   </TKRoot>);
+
+  root.render(
+    <App />
+  )

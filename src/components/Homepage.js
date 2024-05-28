@@ -1,7 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { TKUITripPlanner } from 'tripkit-react';
+import { TKRoot, TKUITripPlanner } from 'tripkit-react';
 import logo from '../assets/public-transport-planner-logo.png';
+
+const config = {
+  apiKey: 'bf08c8030c2c23fca1194bbfb2b50d60', // TripGo API key
+  headers: {
+      // Header to your API calls to authenticate
+      'X-Specific-Header': 'X-TripGo-Key'
+  }
+};
 
 const Homepage = () => {
   return (
@@ -19,7 +27,9 @@ const Homepage = () => {
       <main>
         <h1>Plan your journey</h1>
         <p>on the city's public transport system with ease.</p>
-        <TKUITripPlanner />
+        <TKRoot config={config}>
+          <TKUITripPlanner />
+        </TKRoot>);
       </main>
       <footer>
         <p>&copy; 2024 Public Transport Planner</p>

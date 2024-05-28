@@ -17,7 +17,7 @@ const config = {
 
 function App() {
   return (
-    <TKRoot config={config}>
+    //<TKRoot config={config}>
       <Router>
         <div className="App">
           <Routes>
@@ -29,7 +29,7 @@ function App() {
           </Routes>
         </div>
       </Router>
-    </TKRoot>
+    //</TKRoot>
   );
 }
 
