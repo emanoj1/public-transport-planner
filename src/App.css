@@ -42,22 +42,26 @@ nav ul li {
   height: 10%;
 }
 
+/* Default styles for mobile navigation */
+.navbar-links {
+  display: none; /* Hide navigation links by default */
+}
+
 /* Media query for mobile devices */
-@media screen and (max-width: 600px) {
-  nav ul li {
-    display: block; /* Block display for better stacking on smaller screens */
-    margin: 10px 0; /* Margin for spacing between links */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    text-align: center; /* Center align the navigation */
   }
-   /* Increase the size of the SkedGo logo for mobile devices */
-  .skedgoLogoFooter {
-    width: 20%; /* Adjust width for mobile devices */
-    height: auto; /* Maintain aspect ratio */
+
+  .navbar-links {
+    display: block; /* Show navigation links */
   }
-  .skedgoLogo {
-    width: 20%;
-    height: auto;
+
+  .navbar-links li {
+    margin: 10px 0; /* Add some spacing between navigation links */
   }
 }
+
 
 /* 
 @media (prefers-reduced-motion: no-preference) {
