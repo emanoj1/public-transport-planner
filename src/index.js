@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'reflect-metadata';  // Important: Polyfill for Metadata Reflection API
-import { TKRoot, TKUITripPlanner } from 'tripkit-react';
+//import { TKRoot, TKUITripPlanner } from 'tripkit-react';
 import App from './App'; // Import App for other routes or components
 import './index.css'; // Add any global styles here
 
