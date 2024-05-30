@@ -42,6 +42,14 @@ nav ul li {
   height: 10%;
 }
 
+/* Media query for mobile devices */
+@media screen and (max-width: 600px) {
+  nav ul li {
+    display: block; /* Block display for better stacking on smaller screens */
+    margin: 10px 0; /* Margin for spacing between links */
+  }
+}
+
 /* 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
