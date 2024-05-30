@@ -42,6 +42,7 @@ nav ul li {
   height: 10%;
 }
 
+/* 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -70,4 +71,4 @@ nav ul li {
   to {
     transform: rotate(360deg);
   }
-}
+} */
