@@ -7,7 +7,15 @@ import '../App.css';
 const About = () => {
   return (
     <div className="content-container">
-      <h1>About Me</h1>
+      <h1>About the app</h1>
+      <p>
+      Welcome to <b>COMMUTER FYI</b>, a public transport planner app! 
+      Seamlessly navigate your city's public transportation system with ease using our intuitive interface. 
+      Whether you're commuting solo or in a group, our app provides up-to-the-minute information on predicted departure and arrival times for various modes of transportation, 
+      covering over 400 cities and regions worldwide and integrating with 4000+ transport service providers. 
+      Plan your journey efficiently and stay informed with our comprehensive public transport planner app.
+      </p>
+      <h1>About me</h1>
       <img src={manojProfilePic} alt="SkedGo Logo" className="manojProfilePic" />
       <p>Hi there! &#128075; My name is Manoj Kumar, and I am based in Sydney, Australia &#129432;</p> 
       <p>As part of a hackathon initiative from my bootcamp coding course, I built this web app! &#128640;</p>
@@ -15,7 +23,7 @@ const About = () => {
         I chose to build a public transport timetable app that helps commuters plan their departure & arrival for their chosen locations. 
         You can choose over 400 cities from across the world covering buses, trains, ferries, etc. 
         As time goes on, I am planning to cover as much of the global transit systems as possible! &#128653; </p>
-      <p>Additionally, this is the first web app I have personally ever built and deployed to the world! The launch day (30/5/24) was an exciting day for me! 🥹 </p>
+      <p>Additionally, this is the first web app I have personally ever built and deployed to the world! 🥹 The launch day was Thursday, 30 May 2024! </p>
       <h1>Thank you!</h1>
       <img src={skedgoLogo} alt="SkedGo Logo" className="skedgoLogo" />
       <p>A massive shoutout to the folks (Tim, Mauro, and Adrian) at SkedGo, whose TripGo API was used to make this web app.
