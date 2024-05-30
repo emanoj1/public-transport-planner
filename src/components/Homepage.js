@@ -20,7 +20,7 @@ const Homepage = ({ apiKey }) => {
         </TKRoot>
       </main>
       <footer>
-        <p>&copy; 2024 commuter.fyi</p>
+        <p>&copy; 2024 commuter fyi | Powered by Skedgo </p>
       </footer>
     </div>
   );

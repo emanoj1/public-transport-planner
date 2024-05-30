@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import logo from '../assets/commuter-fyi-logo.png';
+import logo from '../assets/commuter-fyi-logo-2.png';
 
 const Navbar = () => {
     return (
