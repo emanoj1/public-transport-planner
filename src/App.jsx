@@ -12,6 +12,7 @@ function App() {
   // Read API key from environment variable
   const apiKey = process.env.REACT_APP_TRIPGO_API_KEY;
 
+  // eslint-disable-next-line no-unused-vars
   const config = {
     apiKey: apiKey,
     headers: {

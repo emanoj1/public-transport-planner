@@ -5,11 +5,10 @@ import 'reflect-metadata';  // Important: Polyfill for Metadata Reflection API
 import App from './App'; // Import App for other routes or components
 import './index.css'; // Add any global styles here
 
+// eslint-disable-next-line no-unused-vars
 const headers = {
   'X-TripGo-Key': process.env.REACT_APP_TRIPGO_API_KEY // Use API key in the header
 };
-
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
