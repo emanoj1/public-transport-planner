@@ -48,6 +48,15 @@ nav ul li {
     display: block; /* Block display for better stacking on smaller screens */
     margin: 10px 0; /* Margin for spacing between links */
   }
+   /* Increase the size of the SkedGo logo for mobile devices */
+  .skedgoLogoFooter {
+    width: 20%; /* Adjust width for mobile devices */
+    height: auto; /* Maintain aspect ratio */
+  }
+  .skedgoLogo {
+    width: 20%;
+    height: auto;
+  }
 }
 
 /* 
