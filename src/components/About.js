@@ -5,7 +5,7 @@ import '../App.css';
 
 const About = () => {
   return (
-    <div>
+    <div className="content-container">
       <h1>About Me</h1>
       <p>Hi there! &#128075; My name is Manoj Kumar, and I am based in Sydney, Australia &#129432;</p> 
       <p>As part of a hackathon initiative from my bootcamp coding course, I built this web app! &#128640;</p>

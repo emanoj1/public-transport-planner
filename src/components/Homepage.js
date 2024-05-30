@@ -13,7 +13,7 @@ const config = {
 
 const Homepage = () => {
   return (
-    <div>
+    <div className="content-container">
       <header>
         <img src={logo} alt="Public Transport Planner Logo" style={{ display: 'block', margin: '0 auto' }} />
         <nav>

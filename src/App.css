@@ -2,6 +2,12 @@
   text-align: left;
 }
 
+.content-container {
+  padding: 20px;  /* Add padding to give space around the content */
+  margin: 0 auto; /* Center the content horizontally */
+  max-width: 1200px; /* Optional: max-width for better readability */
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
