@@ -1,11 +1,17 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
+.skedgoLogo {
+  width: 10%;
+  height: 30%;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
