@@ -3,7 +3,7 @@
 Welcome to Commuter FYI, a public transport planner app! Seamlessly navigate your city's public transportation system with ease using our intuitive interface. Whether you're commuting solo or in a group, our app provides up-to-the-minute information on predicted departure and arrival times for various modes of transportation, covering over 400 cities and regions worldwide and integrating with 4000+ transport service providers. Plan your journey efficiently and stay informed with our comprehensive public transport planner app.
 
 # Powered by
-![Skedgo logo](./src/assets/skedgo_logo_large.webp)
+![Skedgo logo](./src/assets/skedgo_logo_large.webp)  
 A massive thanks to Skedgo for providing the TripGo API to power the search results for the transit systems across the world.
 
 # The Web App History
