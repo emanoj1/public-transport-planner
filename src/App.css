@@ -32,6 +32,10 @@ nav ul li {
   height: 30%;
 }
 
+.manojProfilePic {
+  width: 10%;
+  height: 10%;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
