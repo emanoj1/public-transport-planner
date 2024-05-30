@@ -1,0 +1,12 @@
+.info-box {
+    background-color: #ffe734; /* Background color in box */
+    border: 2px solid #050505; /* Box border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding around the content */
+    margin-bottom: 20px; /* Spacing between the box and footer */
+  }
+  
+  .info-box p {
+    margin: 0; /* Remove default margins for paragraphs */
+  }
+  

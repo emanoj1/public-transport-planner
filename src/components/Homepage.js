@@ -1,5 +1,8 @@
 import React from 'react';
 import { TKRoot, TKUITripPlanner } from 'tripkit-react';
+import skedgoLogoFooter from '../assets/skedgo_logo_large.webp';
+import './Homepage.css';
+
 
 const Homepage = ({ apiKey }) => {
   const config = {
@@ -19,8 +22,14 @@ const Homepage = ({ apiKey }) => {
           </div>
         </TKRoot>
       </main>
+      <p></p>
+      <div className="info-box">
+        <p> &#128652; Up-to-the minute information on predicted departure/arrival times | Covers 400+ cities and regions and integrating 4000+ transport service providers &#128643;</p>
+      </div>
+
       <footer>
-        <p>&copy; 2024 commuter fyi | Powered by Skedgo </p>
+      <p>Powered by <img src={skedgoLogoFooter} alt="SkedGo Logo" className="skedgoLogoFooter" />, a mobility-as-a-Service platform, shaping the global future of mobility and smart cities.</p>
+        <p>&copy; 2024 commuterfyi | Made with &#9825; in Australia 🇦🇺 </p>
       </footer>
     </div>
   );

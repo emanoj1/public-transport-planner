@@ -17,9 +17,9 @@ const About = () => {
         As time goes on, I am planning to cover as much of the global transit systems as possible! &#128653; </p>
       <p>Additionally, this is the first web app I have personally ever built and deployed to the world! The launch day (30/5/24) was an exciting day for me! 🥹 </p>
       <h1>Thank you!</h1>
-      <p>A massive shoutout to the folks (Tim, Mauro, and Adrian) at SkedGo, whose TripGo API was used to make this web app. </p>
       <img src={skedgoLogo} alt="SkedGo Logo" className="skedgoLogo" />
-      <p>Their support, patience, and understanding in helping an absolute coding newbie like me amidst their busy work schedule is truly heartwarming &#128079; Please check out their company's products and achievements <a href="https://skedgo.com/" target="_blank" rel="noopener noreferrer">here</a>.</p>
+      <p>A massive shoutout to the folks (Tim, Mauro, and Adrian) at SkedGo, whose TripGo API was used to make this web app.
+      Their support, patience, and understanding in helping an absolute coding newbie like me amidst their busy work schedule is truly heartwarming &#128079; Please check out their company's products and achievements <a href="https://skedgo.com/" target="_blank" rel="noopener noreferrer">here</a>.</p>
       <p>I also want to thank my tutor Alex and my classmates at my coding institute for helping me test and troubleshoot my app. Love you guys! &#9996; </p>
       <p>Finally, I extend my heartfelt thanks to you for visiting this website, and I hope you enjoy using this app. Your support motivates me to continue dreaming and building &#128151;</p>
       <p>Cheers!<br />Manoj</p>
