@@ -1,6 +1,8 @@
 import React from 'react';
 import skedgoLogo from '../assets/skedgo_logo_large.webp';
 import manojProfilePic from '../assets/manoj_polaroid_photo.png'
+import buyMeACoffeeLogo from '../assets/bmac-greeen-button.png'
+import kofiLogo from '../assets/kofi_badge_tag_dark.png'
 import '../App.css'; 
 
 
@@ -23,14 +25,24 @@ const About = () => {
         I chose to build a public transport timetable app that helps commuters plan their departure & arrival for their chosen locations. 
         You can choose over 400 cities from across the world covering buses, trains, ferries, etc. 
         As time goes on, I am planning to cover as much of the global transit systems as possible! &#128653; </p>
-      <p>Additionally, this is the first web app I have personally ever built and deployed to the world! 🥹 The launch day was Thursday, 30 May 2024! </p>
+      <p>Additionally, this is the first web app I have personally ever built and deployed to the world! 🥹 The launch day was Thursday,30 May 2024! </p>
       <h1>Thank you!</h1>
       <img src={skedgoLogo} alt="SkedGo Logo" className="skedgoLogo" />
       <p>A massive shoutout to the folks (Tim, Mauro, and Adrian) at SkedGo, whose TripGo API was used to make this web app.
       Their support, patience, and understanding in helping an absolute coding newbie like me amidst their busy work schedule is truly heartwarming &#128079; Please check out their company's products and achievements <a href="https://skedgo.com/" target="_blank" rel="noopener noreferrer">here</a>.</p>
       <p>I also want to thank my tutor Alex and my classmates at my coding institute for helping me test and troubleshoot my app. Love you guys! &#9996; </p>
-      <p>Finally, I extend my heartfelt thanks to you for visiting this website, and I hope you enjoy using this app. Your support motivates me to continue dreaming and building &#128151;</p>
+      <p>Finally, I extend my heartfelt thanks to you for visiting this website, and I hope you enjoy using this app &#128151;</p>
+      <h1>Support</h1>
+      <p>If you find this app useful and would like to support its ongoing build & maintenance via donations, please use one of the links below! </p>
+      <a href="https://buymeacoffee.com/emanoj" target="_blank" rel="noopener noreferrer">
+        <img src={buyMeACoffeeLogo} alt="Buy Me a Coffee Logo" className="buyMeACoffeeLogo" />
+      </a>
+      <a href="https://ko-fi.com/emanoj" target="_blank" rel="noopener noreferrer">
+        <img src={kofiLogo} alt="Ko-Fi Logo" className="kofiLogo" />
+      </a>
+      <p>Thank you in advance! Your support motivates me to continue dreaming and building &#x1F64F;</p>
       <p>Cheers!<br />Manoj</p>
+
     </div>
   );
 };
