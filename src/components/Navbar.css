@@ -1,0 +1,43 @@
+/* Navbar.css */
+
+.navbar {
+    background-color: #333; /* Change this to your desired background color */
+    padding: 1rem 0; /* Adjust padding as needed */
+  }
+  
+  .navbar-wrapper {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav links */
+    align-items: center;
+    max-width: 1200px; /* Max-width to match the page layout */
+    margin: 0 auto; /* Center the navbar within the page */
+    padding: 0 1rem; /* Page padding */
+  }
+  
+  .navbar-logo {
+    height: 50px; /* Adjust as needed */
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* Spacing between links */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links li {
+    margin: 0;
+  }
+  
+  .navbar-links a {
+    color: white; /* Text color */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .navbar-links a:hover {
+    text-decoration: underline;
+  }
+  
+  

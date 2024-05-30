@@ -6,6 +6,8 @@ import Homepage from './components/Homepage';
 import ResultsPage from './components/ResultsPage';
 import About from './components/About';
 import Contact from './components/Contact';
+import Navbar from './components/Navbar';
+import './App.css';
 
 const config = {
   apiKey: 'bf08c8030c2c23fca1194bbfb2b50d60', // TripGo API key
@@ -20,6 +22,7 @@ function App() {
     //<TKRoot config={config}>
       <Router>
         <div className="App">
+          <Navbar />
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/results" element={<ResultsPage />} />
