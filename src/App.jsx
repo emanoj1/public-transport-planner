@@ -1,7 +1,6 @@
 import React from 'react';
-// import logo from './public-transport-planner-logo.png';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { TKRoot, TKUITripPlanner } from 'tripkit-react';
+import { TKUITripPlanner } from 'tripkit-react';
 import Homepage from './components/Homepage';
 import ResultsPage from './components/ResultsPage';
 import About from './components/About';
@@ -9,35 +8,31 @@ import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 import './App.css';
 
-const config = {
-  apiKey: 'bf08c8030c2c23fca1194bbfb2b50d60', // TripGo API key
-  headers: {
-      // Header to your API calls to authenticate
-      'X-Specific-Header': 'X-TripGo-Key'
-  }
-};
-
 function App() {
+  // Read API key from environment variable
+  const apiKey = process.env.REACT_APP_TRIPGO_API_KEY;
+
+  const config = {
+    apiKey: apiKey,
+    headers: {
+      'X-TripGo-Key': apiKey
+    }
+  };
+
   return (
-    //<TKRoot config={config}>
-      <Router>
-        <div className="App">
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Homepage />} />
-            <Route path="/results" element={<ResultsPage />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/planner" element={<TKUITripPlanner />} />
-          </Routes>
-        </div>
-      </Router>
-    //</TKRoot>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Homepage apiKey={apiKey} />} />
+          <Route path="/results" element={<ResultsPage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/planner" element={<TKUITripPlanner />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
 export default App;
-
-
-
-
