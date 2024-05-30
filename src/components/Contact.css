@@ -1,0 +1,13 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Adjust as needed */
+  }
+  
+  .tally-embed-container {
+    max-width: 600px; /* Adjust as needed */
+    width: 100%;
+  }
+  
