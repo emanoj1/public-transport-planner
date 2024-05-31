@@ -27,6 +27,11 @@ nav ul li {
   pointer-events: none;
 }
 
+.manojProfilePic {
+  width: 10%;
+  height: 30%;
+}
+
 .skedgoLogo {
   width: 10%;
   height: 30%;
@@ -48,4 +53,5 @@ nav ul li {
   height: 30%;
   padding: 10px;
 }
+
 
