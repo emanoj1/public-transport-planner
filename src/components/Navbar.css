@@ -1,4 +1,6 @@
 .navbar {
+    justify-content: space-between;
+    align-items: center;
     background-color: #333; /* Change this to your desired background color */
     padding: 1rem 0; /* Adjust padding as needed */
   }
@@ -15,7 +17,24 @@
   .navbar-logo {
     height: 50px; /* Adjust as needed */
   }
-  
+
+  /* World Transit link styles */
+.world-transit-link {
+  background-color: #649baf; /* Background color */
+  color: #000; /* Text color */
+  padding: 10px 20px; /* Padding for the button */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Bold text */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.world-transit-link:hover {
+  background-color: #64f03d; /* Slightly darker background on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+  /* Navbar links */
   .navbar-links {
     list-style: none;
     display: flex;
@@ -70,5 +89,13 @@
 
   .hamburger {
     display: flex;
+  }
+
+  .world-transit-link {
+    margin: 10px 0; /* Margin for spacing */
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    width: calc(100% - 40px); /* Full width with padding considered */
   }
 }

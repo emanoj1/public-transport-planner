@@ -25,7 +25,8 @@ const Navbar = () => {
           <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
           <li><Link to="/about" onClick={toggleMenu}>About</Link></li>
           <li><Link to="/contact" onClick={toggleMenu}>Contact</Link></li>
-          <li><Link to="/worldtransit" onClick={toggleMenu}>World Transit</Link></li>
+          {/* <li><Link to="/worldtransit" onClick={toggleMenu}>World Transit</Link></li> */}
+          <li><Link to="/world-transit" className="world-transit-link">World Transit</Link></li>
         </ul>
       </div>
     </nav>
