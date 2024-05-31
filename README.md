@@ -24,7 +24,9 @@ Click below to watch!
 
 # API powered by
 ![Skedgo logo](./src/assets/skedgo-logo-small.png)  
-A massive thanks to Skedgo for providing the TripGo API to power the search results for the transit systems across the world.
+**Shaping the global future of mobility and smart cities**  
+
+A massive thanks to Skedgo for providing the TripGo API to power the search results for the transit systems across the world. Skedgo provides award-winning technology that delivers mobility solutions and modules. Clients can create their own customised mobility offering, that covers journey planning, parking, book & pay, events and itineraries. Check out their products, services & technology here: [skedgo.com](https://skedgo.com/)
 
 # The Web App History
 This web app was built as a part of a coding course hackathon in May 2024. It was deployed to the world wide web on Thursday, 30 May 2024. Each student, either working solo or in a group, had the opportunity to create something that utilizes React, NodeJS, JavaScript, and an API. I chose to build a public transport timetable app that helps commuters plan their departure & arrival for their chosen locations.
