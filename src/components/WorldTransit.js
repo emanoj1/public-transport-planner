@@ -5,9 +5,12 @@ import '../App.css';
 const WorldTransit = () => {
   return (
     <div className="content-container">
+      <p><i>This page is a work-in-progress. If you have any extra info for the page, <a href="https://commuter.fyi/contact" target="_blank" rel="noopener noreferrer">please let me know!</a></i></p>
       <h1>Public transport/transit information from around the world.</h1>
       <p>On this page, you can find weblinks to major public transportation systems from around the world. We hope this will help you in your travels!</p> 
-      <p>This page is a work-in-progress. If you have any extra info for the page, <a href="https://commuter.fyi/contact" target="_blank" rel="noopener noreferrer">please let me know!</a></p>
+
+      <p>FYI: This Wikipedia page has <a href="https://en.wikipedia.org/wiki/List_of_suburban_and_commuter_rail_systems" target="_blank" rel="noopener noreferrer">a list of suburban and commuter rail systems of major cities & countries.</a></p>
+
 
       <h2>Australia 🇦🇺</h2> 
       
