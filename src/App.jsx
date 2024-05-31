@@ -5,6 +5,7 @@ import Homepage from './components/Homepage';
 import ResultsPage from './components/ResultsPage';
 import About from './components/About';
 import Contact from './components/Contact';
+import WorldTransit from './components/WorldTransit';
 import Navbar from './components/Navbar';
 import './App.css';
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/results" element={<ResultsPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/worldtransit" element={<WorldTransit />} />
           <Route path="/planner" element={<TKUITripPlanner />} />
         </Routes>
       </div>
