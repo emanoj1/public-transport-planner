@@ -1,13 +1,20 @@
 ![commuterfyi logo](./src/assets/commuter-fyi-logo-2.png)
 
-Welcome to Commuter FYI, a public transport planner app! Seamlessly navigate your city's public transportation system with ease using our intuitive interface. Whether you're commuting solo or in a group, our app provides up-to-the-minute information on predicted departure and arrival times for various modes of transportation, covering over 400 cities and regions worldwide and integrating with 4000+ transport service providers. Plan your journey efficiently and stay informed with our comprehensive public transport planner app.
+Welcome to **commuter fyi**, a public transport planner app! Seamlessly navigate your city's public transportation system with ease using our intuitive interface. Whether you're commuting solo or in a group, our app provides up-to-the-minute information on predicted departure and arrival times for various modes of transportation, covering over 400 cities and regions worldwide and integrating with 4000+ transport service providers. Plan your journey efficiently and stay informed with our comprehensive public transport planner app.
 
-# Powered by
-![Skedgo logo](./src/assets/skedgo_logo_large.webp)  
+# Product Tour
+
+Click below to watch!
+
+[![Commuter FYI](./src/assets/vimeo-product-tour-commuterfyi.png)](https://vimeo.com/952288527?share=copy "Commuter FYI Product Tour - Click to Watch!")
+
+
+# API powered by
+![Skedgo logo](./src/assets/skedgo-logo-small.png)  
 A massive thanks to Skedgo for providing the TripGo API to power the search results for the transit systems across the world.
 
 # The Web App History
-This web app was built as a part of a coding course hackathon in May 2024. It was deployed to the world wide web on Thursday, 30 May 2024.
+This web app was built as a part of a coding course hackathon in May 2024. It was deployed to the world wide web on Thursday, 30 May 2024. Each student, either working solo or in a group, had the opportunity to create something that utilizes React, NodeJS, JavaScript, and an API. I chose to build a public transport timetable app that helps commuters plan their departure & arrival for their chosen locations.
 
 # Tech Stack
 
