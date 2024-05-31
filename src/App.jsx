@@ -30,7 +30,7 @@ function App() {
           <Route path="/results" element={<ResultsPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/worldtransit" element={<WorldTransit />} />
+          <Route path="/world-transit" element={<WorldTransit />} />
           <Route path="/planner" element={<TKUITripPlanner />} />
         </Routes>
       </div>
