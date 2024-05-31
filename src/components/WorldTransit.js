@@ -5,12 +5,13 @@ import '../App.css';
 const WorldTransit = () => {
   return (
     <div className="content-container">
-      <h1>Public transport.transit systems around the world.</h1>
+      <h1>Public transport/transit information from around the world.</h1>
       <p>
         On this page, you can find weblinks to major public transportation systems from around the world. 
         We hope this will help you in your travels! If you have any extra info to be added to the page, please let me know!
       </p>
       <h1>Australia</h1>
+      
       <p>Queensland https://translink.com.au/</p>
       <p>Victoria https://www.ptv.vic.gov.au/</p>
       <p>NSW https://transportnsw.info/</p>
