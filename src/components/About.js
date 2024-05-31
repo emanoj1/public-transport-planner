@@ -17,6 +17,7 @@ const About = () => {
       covering over 400 cities and regions worldwide and integrating with 4000+ transport service providers. 
       Plan your journey efficiently and stay informed with our comprehensive public transport planner app.
       </p>
+      <hr />  {/* Horizontal line to separate content */}
       <h1>About me</h1>
       <img src={manojProfilePic} alt="SkedGo Logo" className="manojProfilePic" />
       <p>Hi there! &#128075; My name is Manoj Kumar, and I am based in Sydney, Australia &#129432;</p> 
@@ -26,13 +27,15 @@ const About = () => {
         You can choose over 400 cities from across the world covering buses, trains, ferries, etc. 
         As time goes on, I am planning to cover as much of the global transit systems as possible! &#128653; </p>
       <p>Additionally, this is the first web app I have personally ever built and deployed to the world! 🥹 The launch day was Thursday,30 May 2024! </p>
-      <h1>Thank you!</h1>
+      <hr />  {/* Horizontal line to separate content */}
+      <h1>Gratitude</h1>
       <img src={skedgoLogo} alt="SkedGo Logo" className="skedgoLogo" />
       <p>A massive shoutout to the folks (Tim, Mauro, and Adrian) at SkedGo, whose TripGo API was used to make this web app.
       Their support, patience, and understanding in helping an absolute coding newbie like me amidst their busy work schedule is truly heartwarming &#128079; 
       Please check out their company's products and achievements <a href="https://skedgo.com/" target="_blank" rel="noopener noreferrer">here</a>.</p>
       <p>I also want to thank my tutor Alex and my classmates at my coding institute for helping me test and troubleshoot my app. Love you guys! &#9996; </p>
       <p>Finally, I extend my heartfelt thanks to you for visiting this website, and I hope you enjoy using this app &#128151;</p>
+      <hr />  {/* Horizontal line to separate content */}
       <h1>Support</h1>
       <p>If you find this app useful and would like to support its ongoing build & maintenance via donations, please use one of the links below! </p>
       <a href="https://buymeacoffee.com/emanoj" target="_blank" rel="noopener noreferrer">
