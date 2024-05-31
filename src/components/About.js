@@ -29,7 +29,8 @@ const About = () => {
       <h1>Thank you!</h1>
       <img src={skedgoLogo} alt="SkedGo Logo" className="skedgoLogo" />
       <p>A massive shoutout to the folks (Tim, Mauro, and Adrian) at SkedGo, whose TripGo API was used to make this web app.
-      Their support, patience, and understanding in helping an absolute coding newbie like me amidst their busy work schedule is truly heartwarming &#128079; Please check out their company's products and achievements <a href="https://skedgo.com/" target="_blank" rel="noopener noreferrer">here</a>.</p>
+      Their support, patience, and understanding in helping an absolute coding newbie like me amidst their busy work schedule is truly heartwarming &#128079; 
+      Please check out their company's products and achievements <a href="https://skedgo.com/" target="_blank" rel="noopener noreferrer">here</a>.</p>
       <p>I also want to thank my tutor Alex and my classmates at my coding institute for helping me test and troubleshoot my app. Love you guys! &#9996; </p>
       <p>Finally, I extend my heartfelt thanks to you for visiting this website, and I hope you enjoy using this app &#128151;</p>
       <h1>Support</h1>
