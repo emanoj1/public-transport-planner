@@ -8,6 +8,19 @@ Click below to watch!
 
 [![Commuter FYI](./src/assets/vimeo-product-tour-commuterfyi.png)](https://vimeo.com/952288527?share=copy "Commuter FYI Product Tour - Click to Watch!")
 
+# How to use the web app
+
+**FYI**: When you land on the page, you will get an alert asking to turn on your location settings. Doing so, allows the map API to determine your country & city, and this allows you to do the following functions easily. Otherwise, you will need to scroll through the map to your country/city first. I recommend turning on the location setting, and once it captures your region, you can turn it off in your browser settings.
+
+**Steps to see your journey details**
+<ol>
+<li>Visit commuter.fyi</li>
+<li>On the homepage map, look for a search box, top-left</li>
+<li>Enter your station or suburb of interest</li>
+<li>If you need to see departure times between 2 locations, click on the green icon with a white arrow in the search bar, and enter your departure and arrival locations</li>
+</ol>
+
+
 
 # API powered by
 ![Skedgo logo](./src/assets/skedgo-logo-small.png)  
